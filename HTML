@@ -1,108 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MP Service Governors Status Summary</title>
-  <style>
-    body {
-      font-family: 'Public Sans', sans-serif;
-      padding: 20px;
-      background: #fff;
-    }
-    .table-container {
-      max-width: 800px;
-      margin: auto;
-    }
-    table.mp-service {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: center;
-    }
-    table.mp-service thead th {
-      background: #f0f0f0;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 10px 5px;
-    }
-    table.mp-service thead th.category {
-      background: #d9d9d9;
-      font-size: 12px;
-    }
-    table.mp-service tbody tr:nth-child(even) {
-      background: #fafafa;
-    }
-    table.mp-service td, table.mp-service th {
-      border: 1px solid #e0e0e0;
-      padding: 8px;
-    }
-    .pill {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 12px;
-      color: #fff;
-      font-weight: 500;
-      min-width: 30px;
-    }
-    .pill.green { background: #4caf50; }
-    .pill.orange { background: #ff9800; }
-    .pill.red    { background: #f44336; }
-    /* emphasise Total row */
-    table.mp-service tbody tr.total {
-      font-weight: 600;
-      background: #f7f7f7;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garage Rentals</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="table-container">
-    <table class="mp-service">
-      <thead>
-        <tr>
-          <th rowspan="2">Region</th>
-          <th colspan="2" class="category">Routine Inspections</th>
-          <th colspan="2" class="category">Functional Checks</th>
-          <th colspan="2" class="category">MP Gov Exchanges</th>
-        </tr>
-        <tr>
-          <th>Issued</th><th>Outstanding</th>
-          <th>Issued</th><th>Outstanding</th>
-          <th>Issued</th><th>Outstanding</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>SO Aldershot</td>
-          <td>19</td>  <td><span class="pill green">0</span></td>
-          <td>160</td> <td><span class="pill red">160</span></td>
-          <td>124</td> <td><span class="pill red">124</span></td>
-        </tr>
-        <tr>
-          <td>SO Oxford</td>
-          <td>24</td>  <td><span class="pill green">19</span></td>
-          <td>56</td>  <td><span class="pill orange">56</span></td>
-          <td>52</td>  <td><span class="pill orange">52</span></td>
-        </tr>
-        <tr>
-          <td>SO Poole &amp; IOW</td>
-          <td>326</td> <td><span class="pill green">126</span></td>
-          <td>495</td> <td><span class="pill red">486</span></td>
-          <td>51</td>  <td><span class="pill orange">51</span></td>
-        </tr>
-        <tr>
-          <td>SO Solent</td>
-          <td>93</td>  <td><span class="pill green">68</span></td>
-          <td>0</td>   <td><span class="pill green">0</span></td>
-          <td>14</td>  <td><span class="pill orange">14</span></td>
-        </tr>
-        <tr class="total">
-          <td>Total</td>
-          <td>462</td> <td><span class="pill green">213</span></td>
-          <td>711</td> <td><span class="pill red">702</span></td>
-          <td>241</td> <td><span class="pill red">241</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <header>
+    <div class="logo">GarageSpace</div>
+    <nav>
+      <a href="#listings">Garages</a>
+      <a href="#contact">Book</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Secure Garage Rentals</h1>
+    <p>Need space? Rent a garage in your area today.</p>
+    <a href="#listings" class="btn">View Listings</a>
+  </section>
+
+  <section id="listings" class="listings">
+    <h2>Available Garages</h2>
+    <div class="card">
+      <h3>Garage #1 – London</h3>
+      <p>£150/month – 10x20ft – Secure gated entry</p>
+    </div>
+    <div class="card">
+      <h3>Garage #2 – Manchester</h3>
+      <p>£120/month – 9x18ft – CCTV monitored</p>
+    </div>
+    <div class="card">
+      <h3>Garage #3 – Birmingham</h3>
+      <p>£100/month – 8x16ft – 24/7 access</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Book a Garage</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <select name="garage">
+        <option>Garage #1 – London</option>
+        <option>Garage #2 – Manchester</option>
+        <option>Garage #3 – Birmingham</option>
+      </select>
+      <textarea name="message" placeholder="Anything else?" rows="4"></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 GarageSpace. All rights reserved.</p>
+  </footer>
 </body>
 </html>
